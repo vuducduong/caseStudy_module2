@@ -50,25 +50,6 @@ class Product
         $this->price = $price;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getProductDescription()
-    {
-        return $this->productDescription;
-    }
-
-    /**
-     * @param mixed $productDescription
-     */
-    public function setProductDescription($productDescription)
-    {
-        $this->productDescription = $productDescription;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getProductType()
     {
         return $this->productType;

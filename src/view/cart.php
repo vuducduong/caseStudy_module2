@@ -9,7 +9,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -91,7 +91,7 @@
                         <td><img class="img-responsive" src="<?php echo $value['image'] ?>"
                                  style="width:100px;"></td>
                         <td colspan="2"><strong><?php echo $value['productName'] ?></strong></td>
-                        <td><input type="text" class="form-control input-sm"
+                        <td><input type="text" style="width:min-content;position: relative;left: 59px" class="form-control input-sm"
                                    name="cart[<?php echo $key ?>][quantity]"
                                    value="<?php echo $_SESSION['cart'][$key]['quantity'] ?>">
                             <input type="hidden" class="form-control input-sm"
@@ -143,8 +143,8 @@
                 <div class="col-sm-12  col-md-6">
                 </div>
                 <div class="col-sm-12  col-md-3">
-                    <a href="index.php">
-                        <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                    <a href="index.php" style="text-decoration: #007bff">
+                        <button class="btn btn-lg btn-block btn-info text-uppercase">Tiếp tục</button>
                     </a></div>
                 <div class="col-sm-12 col-md-3 text-right">
                     <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>

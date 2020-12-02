@@ -35,4 +35,14 @@ class ProductModel
         $result = $stmt->fetch();
         return $result;
     }
+    public function addProduct($product){
+        $sql = "INSERT INTO `products`(`productName`, `price`,`productType`, `image`) 
+        VALUES (:productName,:price,:productType,:image)";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindParam(':productName',$product->getProductName());
+        $stmt->bindParam(':price',$product->getPrice());
+        $stmt->bindParam(':productType',$product->getProductType());
+        $stmt->bindParam(':image',$product->getImage());
+        $stmt->execute();
+    }
 }

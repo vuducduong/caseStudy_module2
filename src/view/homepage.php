@@ -10,7 +10,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -59,7 +59,7 @@
     </div>
 </nav>
 <div class="container">
-<div id="carouselExampleIndicators" class="  col-md-9 carousel slide mt-1"data-ride="carousel">
+<div id="carouselExampleIndicators" style="padding-left: 1px; height: " class="  col-md-9 carousel slide mt-1"data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -91,11 +91,11 @@
     <div class="container">
         <div class="row mt-5">
             <?php foreach ($products as $key=>$product):?>
-            <div class="col-md-2 col-sm-8">
+            <div class="col-md-2 col-sm-8" >
                 <div class="card mb-4 box-shadow">
                     <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="width: 100%; display: block;" src="<?php echo $product['image']?>" data-holder-rendered="true">
-                    <div class="card-body">
-                        <p class="card-text"><?php echo $product['productName']?></p>
+                    <div style="height: 150px; width: 150px" class="card-body">
+                        <p  style="font-size: small;width: 70px;height: 60px" class="card-text"><?php echo $product['productName']?></p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <a class="btn btn-sm btn-outline-secondary" name="id" href="index.php?page=action&action=add&id=<?php echo $product['id']?>">Buy</a>
