@@ -12,7 +12,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../../css/styleAdmin.css">
+    <link rel="stylesheet" href="../../../css/styleAdmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -73,6 +73,8 @@
         </div>
     </div>
     <div class="main-body-content w-100 ets-pt">
+        <h1 align="center" ><strong>Danh sách sản phẩm</strong></h1>
+        <a href="routeAdmin.php?admin=add" class="btn btn-success">Add</a>
             <table class="table table-bordered table-hover">
                 <tr>
                     <th>ID</th>
@@ -80,6 +82,7 @@
                     <th>Product Type</th>
                     <th>Price</th>
                     <th>Image</th>
+                    <th colspan="2">Action</th>
                 <?php foreach ($products as $key=>$product):?>
                 <tr>
                     <td><?php echo $key+1 ?></td>
@@ -87,6 +90,8 @@
                     <td><?php echo $product['productType']?></td>
                     <td><?php echo  number_format($product['price'])?> đ</td>
                     <td><img style="width: 100px" src="<?php echo $product['image']?>"</td>
+                    <td><a href="http://localhost/case_studymodule2/routeAdmin.php?admin=edit&id=<?php echo $product['id']?>" class="btn btn-warning">Edit</a></td>
+                    <td><a href="routeAdmin.php?admin=delete&id=<?php echo $product['id']?>" class="btn btn-danger">Delete</a></td>
                 </tr>
             <?php endforeach?>
             </table>
