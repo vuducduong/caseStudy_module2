@@ -38,7 +38,7 @@ class CartController
                 }
             }
         }
-        include_once "src/view/cart.php";
+        include_once "src/view/view-customer/cart.php";
     }
 
     public function removeProduct()

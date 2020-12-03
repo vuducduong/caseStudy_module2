@@ -26,7 +26,7 @@
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput">Image</label>
-                <img width="100px" src="<?php echo $products['image']?>" alt="">
+                <img width="100px" src="<?php echo $products['image']?>">
                 <input type="file" name="image" class="form-control" id="formGroupExampleInput" value="<?php echo $products['image']?>" placeholder="Disabled input">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

@@ -3,24 +3,28 @@
 
 namespace app\model;
 
-
 class Product
 {
+    protected $id;
     protected $productName;
     protected $price;
-    protected $productDescription;
     protected $productType;
     protected $image;
 
-    public function __construct($productName,$price,$productDescription,$productType,$image)
+    public function __construct($productName,$price,$productType,$image)
     {
         $this->productName=$productName;
         $this->price=$price;
-        $this->productDescription=$productDescription;
         $this->productType=$productType;
         $this->image=$image;
     }
+    public function getId(){
+        return $this->id;
+    }
 
+    public function setId($id){
+        $this->id = $id;
+    }
     public function getProductName()
     {
         return $this->productName;
