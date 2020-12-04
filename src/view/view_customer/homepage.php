@@ -41,13 +41,13 @@
                 </li>
             </ul>
 
-            <form method="post" class="form-inline my-2 my-lg-0">
+            <form method="post" action="http://localhost/case_studymodule2/index.php?page=search" class="form-inline my-2 my-lg-0">
                 <div class="input-group input-group-sm">
-                    <input type="text" name="productName" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                    <input type="text" name="search" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
                     <div class="input-group-append">
-                        <button type="button" class="btn btn-secondary btn-number">
+                        <button type="submit" class="btn btn-secondary btn-number">
                             <i class="fa fa-search"></i>
-                        </button>
+                            </button>
                     </div>
                 </div>
                 <a class="btn btn-success btn-sm ml-3" href="index.php?page=action&action=cart">

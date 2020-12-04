@@ -84,7 +84,7 @@
                     <td><?php echo  number_format($product['price'])?> đ</td>
                     <td><img style="width: 100px" src="<?php echo $product['image']?>"</td>
                     <td><a href="http://localhost/case_studymodule2/routeAdmin.php?admin=edit&id=<?php echo $product['id']?>" class="btn btn-warning">Edit</a></td>
-                    <td><a href="http://localhost/case_studymodule2/routeAdmin.php?admin=delete&id=<?php echo $product['id']?>" class="btn btn-danger">Delete</a></td>
+                    <td><a  onclick="return display('Bạn chắc chứ?')" href="http://localhost/case_studymodule2/routeAdmin.php?admin=delete&id=<?php echo $product['id']?>" class="btn btn-danger">Delete</a></td>
                 </tr>
             <?php endforeach?>
             </table>
