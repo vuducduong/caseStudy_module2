@@ -1,63 +1,6 @@
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="../../../css/style.css">
-</head>
-<body>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container">
-        <img  width="80px" src="http://localhost/case_studymodule2/uploads/nhatcuong.png" class="img-fluid rounded-square border bg-secoundry mb-3">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item m-auto">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdown">Sản phẩm</a>
-                    <div class="dropdown-content">
-                        <a class="dropdown-item" href="index.php?page=iphone">Iphone</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="index.php?page=samsung">Samsung</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="index.php?page=Vinsmart">Vinsmart</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="contact.html">Cart <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-
-            <form method="post" action="http://localhost/case_studymodule2/index.php?page=search" class="form-inline my-2 my-lg-0">
-                <div class="input-group input-group-sm">
-                    <input type="text" name="search" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
-                    <div class="input-group-append">
-                        <button type="submit" class="btn btn-secondary btn-number">
-                            <i class="fa fa-search"></i>
-                            </button>
-                    </div>
-                </div>
-                <a class="btn btn-success btn-sm ml-3" href="index.php?page=action&action=cart">
-                    <i class="fa fa-shopping-cart"></i> Cart
-                    <span class="badge badge-light"></span>
-                </a>
-            </form>
-        </div>
-    </div>
-</nav>
+<?php require_once "src/view/view_customer/blocks_customer/header.php"?>
 <div class="container">
 <div id="carouselExampleIndicators" style="padding-left: 1px; height: " class="  col-md-9 carousel slide mt-1"data-ride="carousel">
     <ol class="carousel-indicators">
@@ -67,13 +10,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="https://via.placeholder.com/1920x530" alt="First slide">
+            <img class="d-block w-100" src="http://localhost/case_studymodule2/uploads/carousel/iphone-12-800-300-800x300-2.png" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://via.placeholder.com/1920x530" alt="Second slide">
+            <img class="d-block w-100" src="http://localhost/case_studymodule2/uploads/carousel/800-300-800x300.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://via.placeholder.com/1920x530" alt="Third slide">
+            <img class="d-block w-100" src="http://localhost/case_studymodule2/uploads/carousel/reno4-800-300-800x300-5.png" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -107,44 +50,4 @@
             </div>
             <?php endforeach?>
         </div>
-        <footer class="text-light">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-                    <small class="d-block mb-3 text-muted">© 2017-2018</small>
-                </div>
-                <div class="col-6 col-md">
-                    <h6>HỆ THỐNG CỬA HÀNG</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Cool stuff</a></li>
-                        <li><a class="text-muted" href="#">Random feature</a></li>
-                        <li><a class="text-muted" href="#">Team feature</a></li>
-                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                        <li><a class="text-muted" href="#">Another one</a></li>
-                        <li><a class="text-muted" href="#">Last time</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <H6>QUY ĐỊNH - CHÍNH SÁCH</H6>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Resource</a></li>
-                        <li><a class="text-muted" href="#">Resource name</a></li>
-                        <li><a class="text-muted" href="#">Another resource</a></li>
-                        <li><a class="text-muted" href="#">Final resource</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>About</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Team</a></li>
-                        <li><a class="text-muted" href="#">Locations</a></li>
-                        <li><a class="text-muted" href="#">Privacy</a></li>
-                        <li><a class="text-muted" href="#">Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-</body>
-</html>
+        <?php require_once "src/view/view_customer/blocks_customer/footer.php"?>

@@ -4,7 +4,7 @@
 namespace app\controller;
 
 
-use app\model\ProductModel;
+use app\model\product_model\ProductModel;
 
 class CartController
 {
@@ -38,7 +38,7 @@ class CartController
                 }
             }
         }
-        include_once "src/view/view-customer/cart.php";
+        include_once "src/view/view_customer/cart.php";
     }
 
     public function removeProduct()

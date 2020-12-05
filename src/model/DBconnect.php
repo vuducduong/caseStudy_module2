@@ -17,7 +17,6 @@ class DBconnect
         $this->dsn='mysql:host=localhost;dbname=casestudy';
     }
     public function connect(){
-        $connect = new PDO($this->dsn,$this->username,$this->password);
-        return $connect;
+        return new PDO($this->dsn,$this->username,$this->password);
     }
 }

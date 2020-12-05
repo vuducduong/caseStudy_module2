@@ -4,8 +4,8 @@
 namespace app\controller;
 
 
-use app\model\Product;
-use app\model\ProductModel;
+use app\model\product_model\Product;
+use app\model\product_model\ProductModel;
 
 class AdminController
 {
@@ -19,13 +19,13 @@ class AdminController
     public function showProduct()
     {
         $products = $this->admin_Model->getAll();
-        include_once "src/view/view-admin/pageAdmin.php";
+        include_once "src/view/view_admin/pageAdmin.php";
     }
 
     public function addProduct()
     {
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
-            include_once "src/view/view-admin/add.php";
+            include_once "src/view/view_admin/add_product.php";
         } else {
             $name = $_REQUEST['productName'];
             $type = $_REQUEST['productType'];
@@ -49,7 +49,7 @@ class AdminController
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
             $id = $_REQUEST['id'];
             $products = $this->admin_Model->getId($id);
-            include_once "src/view/view-admin/edit.php";
+            include_once "src/view/view_admin/edit_product.php";
         } else {
             $name = $_REQUEST['productName'];
             $type = $_REQUEST['productType'];

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\model\prodt_model;
+namespace app\model\product_model;
 
 class Product
 {

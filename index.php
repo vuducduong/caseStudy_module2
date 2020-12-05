@@ -21,8 +21,8 @@ $cartController = new \app\controller\CartController();
 </head>
 <body>
 <?php
-$page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : NULL;
-$action = (isset($_REQUEST['action'])) ? $_REQUEST['action'] : NULL;
+$page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : "";
+$action = (isset($_REQUEST['action'])) ? $_REQUEST['action'] : "";
 
 switch ($page) {
     case 'iphone':
@@ -49,6 +49,11 @@ switch ($page) {
                 $cartController->addToCart();
                 break;
         }
+        break;
+
+
+    case 'search':
+        $productController->search();
         break;
     default:
         $productController->show();
