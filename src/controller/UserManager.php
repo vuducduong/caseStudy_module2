@@ -20,19 +20,22 @@ class UserManager
     {
         $users = $this->userModel->showListUser();
 
-        include_once "src/view/view_admin/view_admin_user/list_user.php";
+        include_once "src/view/view_admin/user_management/list_user.php";
     }
 
     public function addUser()
     {
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
-            include_once "src/view/view_admin/view_admin_user/add_user.php";
+            include_once "src/view/view_admin/user_management/add_user.php";
         } else {
-            $name = $_REQUEST['name'];
+            $userName = $_REQUEST['userName'];
+            $passWord = $_REQUEST['passWord'];
+            $fullname = $_REQUEST['fullname'];
             $address = $_REQUEST['address'];
+            $sex = $_REQUEST['sex'];
             $email = $_REQUEST['email'];
             $phoneNumber = $_REQUEST['phoneNumber'];
-            $user = new User($name, $address, $email, $phoneNumber);
+            $user = new User($userName,$passWord,$fullname,$address,$sex, $email, $phoneNumber);
             $this->userModel->addUser($user);
             header("location:routeAdmin.php?admin=user");
         }
@@ -43,15 +46,18 @@ class UserManager
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
             $id = $_REQUEST['id'];
             $user = $this->userModel->getUserById($id);
-            include_once "src/view/view_admin/view_admin_user/edit_user.php";
+            include_once "src/view/view_admin/user_management/edit_user.php";
         }
         else{
-            $name = $_REQUEST['name'];
+            $userName = $_REQUEST['userName'];
+            $passWord = $_REQUEST['passWord'];
+            $fullname = $_REQUEST['fullname'];
             $address = $_REQUEST['address'];
+            $sex = $_REQUEST['sex'];
             $email = $_REQUEST['email'];
             $phoneNumber = $_REQUEST['phoneNumber'];
             $id = $_REQUEST['id'];
-            $newUser = new User($name,$address,$email,$phoneNumber);
+            $newUser = new User($userName,$passWord,$fullname,$address,$sex, $email, $phoneNumber);
             $newUser->setId($id);
             $this->userModel->editUser($newUser);
             header("location:routeAdmin.php?admin=user");

@@ -6,13 +6,27 @@
         <form method="post" enctype="multipart/form-data">
             <fieldset >
                 <div class="form-group" >
-                    <label for="formGroupExampleInput">User Name</label>
-                    <input type="text" name="name" class="form-control" value="<?php echo $user['name']?>" id="formGroupExampleInput" placeholder="Example input placeholder">
-                </div>
+                    <div class="form-group" >
+                        <label for="formGroupExampleInput">User Name</label>
+                        <input type="text" name="userName" class="form-control" value="<?php echo $user['userName']?>" id="formGroupExampleInput" placeholder="Example input placeholder">
+                    </div>
+                    <div class="form-group" >
+                        <label for="formGroupExampleInput">Pass Word</label>
+                        <input type="text" name="passWord" class="form-control" value="<?php echo $user['passWord']?>" id="formGroupExampleInput" placeholder="Example input placeholder">
+                    </div>
+
+                    <div class="form-group" >
+                        <label for="formGroupExampleInput">Full Name</label>
+                        <input type="text" name="fullname" class="form-control" value="<?php echo $user['fullname']?>" id="formGroupExampleInput" placeholder="Example input placeholder">
+                    </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Address</label>
                     <input type="text" name="address" value="<?php echo $user['address']?>" id="formGroupExampleInput" class="form-control" placeholder="Disabled input">
                 </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Sex</label>
+                        <input type="text" name="sex" value="<?php echo $user['sex']?>" id="formGroupExampleInput" class="form-control" placeholder="Disabled input">
+                    </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput">email</label>
                     <input type="email" name="email"  value="<?php echo $user['email']?>"class="form-control" id="formGroupExampleInput" placeholder="Disabled input">

@@ -19,13 +19,13 @@ class AdminController
     public function showProduct()
     {
         $products = $this->admin_Model->getAll();
-        include_once "src/view/view_admin/pageAdmin.php";
+        include_once "src/view/view_admin/product_management/pageAdmin.php";
     }
 
     public function addProduct()
     {
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
-            include_once "src/view/view_admin/add_product.php";
+            include_once "src/view/view_admin/product_management/add_product.php";
         } else {
             $name = $_REQUEST['productName'];
             $type = $_REQUEST['productType'];
@@ -49,7 +49,7 @@ class AdminController
         if ($_SERVER['REQUEST_METHOD'] == "GET") {
             $id = $_REQUEST['id'];
             $products = $this->admin_Model->getId($id);
-            include_once "src/view/view_admin/edit_product.php";
+            include_once "src/view/view_admin/product_management/edit_product.php";
         } else {
             $name = $_REQUEST['productName'];
             $type = $_REQUEST['productType'];

@@ -54,6 +54,8 @@
                         <span class="badge badge-light"></span>
                     </a>
                 </form>
+                <a href="index.php?page=sign-up">Sign Up</a>
+
             </div>
         </div>
     </nav>

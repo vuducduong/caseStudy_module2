@@ -4,6 +4,7 @@ session_start();
 require_once __DIR__ . "/vendor/autoload.php";
 $productController = new \app\controller\ProductController();
 $cartController = new \app\controller\CartController();
+$signUp = new \app\controller\SignUp();
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,7 +24,6 @@ $cartController = new \app\controller\CartController();
 <?php
 $page = (isset($_REQUEST['page'])) ? $_REQUEST['page'] : "";
 $action = (isset($_REQUEST['action'])) ? $_REQUEST['action'] : "";
-
 switch ($page) {
     case 'iphone':
         $productController->showPhoneType('iphone');
@@ -54,6 +54,9 @@ switch ($page) {
 
     case 'search':
         $productController->search();
+        break;
+    case 'sign-up':
+        $signUp->signUp();
         break;
     default:
         $productController->show();

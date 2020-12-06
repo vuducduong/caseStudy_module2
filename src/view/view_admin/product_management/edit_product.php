@@ -27,4 +27,4 @@
     </form>
 </div>
 </div>
-<?php require_once "src/view/view_admin/blocks_admin/footer.php"?>
+<?php require_once "src/view/view_admin/blocks_admin/footer.php" ?>

@@ -16,10 +16,13 @@ class UserModel extends DBconnect
         return $stmt->fetchAll();
     }
     public function addUser($user){
-        $sql = "INSERT INTO users(name,address,email,phoneNumber) VALUES (:name,:address,:email,:phoneNumber)";
+        $sql = "INSERT INTO users(userName,passWord,fullname,address,sex,email,phoneNumber) VALUES (:userName,:passWord,:fullname,:address,:sex,:email,:phoneNumber)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->bindParam(":name",$user->getName());
+        $stmt->bindParam(":userName",$user->getUserName());
+        $stmt->bindParam(":passWord",$user->getPassWord());
+        $stmt->bindParam(":fullname",$user->getFullName());
         $stmt->bindParam(":address",$user->getAddress());
+        $stmt->bindParam(":sex",$user->getSex());
         $stmt->bindParam(":email",$user->getEmail());
         $stmt->bindParam(":phoneNumber",$user->getPhoneNumber());
         $stmt->execute();
@@ -33,10 +36,13 @@ class UserModel extends DBconnect
     }
     public function editUser($newUser)
     {
-        $sql = "UPDATE `users` SET `name`=:name,`address`=:address,`email`=:email,`phoneNumber`=:phoneNumber WHERE id=:id";
+        $sql = "UPDATE `users` SET userName=:userName,passWord=:passWord,`fullname`=:fullname,`address`=:address,sex=:sex,`email`=:email,`phoneNumber`=:phoneNumber WHERE id=:id";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->bindParam(":name",$newUser->getName());
+        $stmt->bindParam(":userName",$newUser->getUserName());
+        $stmt->bindParam(":passWord",$newUser->getPassWord());
+        $stmt->bindParam(":fullname",$newUser->getFullName());
         $stmt->bindParam(":address",$newUser->getAddress());
+        $stmt->bindParam(":sex",$newUser->getSex());
         $stmt->bindParam(":email",$newUser->getEmail());
         $stmt->bindParam(":phoneNumber",$newUser->getPhoneNumber());
         $stmt->bindParam(":id",$newUser->getId());

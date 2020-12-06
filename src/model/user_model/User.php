@@ -6,15 +6,21 @@ namespace app\model\user_model;
 
 class User
 {
-    protected $name;
+    protected $userName;
+    protected $passWord;
+    protected $fullname;
     protected $address;
+    protected $sex;
     protected $email;
     protected $phoneNumber;
     protected $id;
-    public function __construct($name,$address,$email,$phoneNumber)
+    public function __construct($userName,$passWord,$fullname,$address,$sex,$email,$phoneNumber)
     {
-        $this->name = $name;
+        $this->userName = $userName;
+        $this->passWord = $passWord;
+        $this->fullname = $fullname;
         $this->address= $address;
+        $this->sex = $sex;
         $this->email = $email;
         $this->phoneNumber = $phoneNumber;
     }
@@ -22,17 +28,49 @@ class User
     /**
      * @return mixed
      */
-    public function getName()
+    public function getUserName()
     {
-        return $this->name;
+        return $this->userName;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $userName
      */
-    public function setName($name)
+    public function setUserName($userName)
     {
-        $this->name = $name;
+        $this->userName = $userName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassWord()
+    {
+        return $this->passWord;
+    }
+
+    /**
+     * @param mixed $passWord
+     */
+    public function setPassWord($passWord)
+    {
+        $this->passWord = $passWord;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFullname()
+    {
+        return $this->fullname;
+    }
+
+    /**
+     * @param mixed $fullname
+     */
+    public function setFullname($fullname)
+    {
+        $this->fullname = $fullname;
     }
 
     /**
@@ -49,6 +87,22 @@ class User
     public function setAddress($address)
     {
         $this->address = $address;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSex()
+    {
+        return $this->sex;
+    }
+
+    /**
+     * @param mixed $sex
+     */
+    public function setSex($sex)
+    {
+        $this->sex = $sex;
     }
 
     /**
@@ -98,5 +152,7 @@ class User
     {
         $this->id = $id;
     }
+
+
 
 }

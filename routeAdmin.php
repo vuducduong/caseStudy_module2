@@ -25,7 +25,8 @@ $userManager = new \app\controller\UserManager();
 $user = (isset($_REQUEST['user']))?$_REQUEST['user']:"";
 $adminController = new \app\controller\AdminController();
 $admin = (isset($_REQUEST['admin']))?$_REQUEST['admin']:"";
-
+$orderManager = new \app\controller\OrderManager();
+$order = (isset($_REQUEST['order']))? $_REQUEST['order']:"";
 switch ($admin){
     case 'add':
         $adminController->addProduct();
@@ -49,6 +50,15 @@ switch ($admin){
                 break;
             default:
                 $userManager->showUser();
+        }
+        break;
+    case 'order':
+        switch ($order){
+            case 'add-order':
+                $orderManager->addOrder();
+                break;
+            default:
+                $orderManager->showOrders();
         }
         break;
     default:

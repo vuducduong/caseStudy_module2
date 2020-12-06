@@ -62,7 +62,7 @@
                 <div class="icons d-flex flex-column align-items-center">
                     <a href="http://localhost/case_studymodule2/routeAdmin.php" class="set-width text-center display-inline-block my-1"><i class="fa fa-home"></i></a>
                     <a href="http://localhost/case_studymodule2/routeAdmin.php?admin=user" class="set-width text-center display-inline-block my-1"><i class="fa fa-users"></i></a>
-                    <a href="#" class="set-width text-center display-inline-block my-1"><i class="fa fa-file-text"></i></a>
+                    <a href="http://localhost/case_studymodule2/routeAdmin.php?admin=order" class="set-width text-center display-inline-block my-1"><i class="fa fa-file-text"></i></a>
                 </div>
             </div>
         </div>
