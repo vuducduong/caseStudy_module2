@@ -7,19 +7,19 @@
         <fieldset >
             <div class="form-group col-6" >
                 <label for="formGroupExampleInput">Product Name</label>
-                <input type="text" name="productName" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                <input type="text" name="productName" required="required" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
             </div>
             <div class="form-group col-6">
                 <label for="formGroupExampleInput">Product Type</label>
-                <input type="text" name="productType" id="formGroupExampleInput" class="form-control" placeholder="Disabled input">
+                <input type="text" name="productType" required="required" id="formGroupExampleInput" class="form-control" placeholder="Disabled input">
             </div>
             <div class="form-group col-6">
                 <label for="formGroupExampleInput">Price</label>
-                <input type="text" name="price" class="form-control" id="formGroupExampleInput" placeholder="Disabled input">
+                <input type="text" name="price" required="required" class="form-control" id="formGroupExampleInput" placeholder="Disabled input">
             </div>
             <div class="form-group col-6">
                 <label for="formGroupExampleInput">Image</label>
-                <input type="file" name="image" class="form-control" id="formGroupExampleInput" placeholder="Disabled input">
+                <input type="file" name="image" required="required" class="form-control" id="formGroupExampleInput" placeholder="Disabled input">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </fieldset>

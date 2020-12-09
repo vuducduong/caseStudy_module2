@@ -58,11 +58,10 @@ class ProductModel extends DBconnect
 
     public function searchProduct($search)
     {
-        $sql = "SELECT * FROM `products` WHERE productName=:productName or productType=:productType or price=:price";
+        $sql = "SELECT * FROM `products` WHERE productName=:productName or productType=:productType";
         $stmt = $this->connect()->prepare($sql);
         $stmt->bindParam(':productName',$search);
         $stmt->bindParam(':productType',$search);
-        $stmt->bindParam(':price',$search);
         $stmt->execute();
         return $stmt->fetchAll();
     }

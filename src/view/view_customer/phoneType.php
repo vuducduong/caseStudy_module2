@@ -1,7 +1,8 @@
 
 
-<?php require_once 'src/view/view_customer/blocks_customer/header.php'?>
-<!--end slide-->
+<?php if(!empty($_SESSION['user'])){
+    require_once "src/view/view_customer/blocks_customer/header-member.php";}
+else{require_once "src/view/view_customer/blocks_customer/header.php";}?>
 
 <div class="container">
     <div class="row mt-5">
@@ -23,8 +24,8 @@
             </div>
         <?php endforeach?>
     </div>
-    <?php require_once "src/view/view_customer/blocks_customer/footer.php"?>
 </div>
+    <?php require_once "src/view/view_customer/blocks_customer/footer.php"?>
 
 </body>
 </html>

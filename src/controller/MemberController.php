@@ -18,11 +18,47 @@ class MemberController
 
     public function login()
     {
-        $this->memberModel->login();
-        header("index.php");
-        $user_name = $_REQUEST['userName'];
-        $pass_word = $_REQUEST['passWord'];
-        $member = new Member($user_name,$pass_word);
-        $this->memberModel->login($member);
+        if ($_SERVER['REQUEST_METHOD'] == "GET") {
+            include_once "src/view/Sign_in/sign_in.php";
+        } else {
+            $user_name = $_REQUEST['userName'];
+            $pass_word = $_REQUEST['passWord'];
+            $CheckUserPass = $this->memberModel->login($user_name);
+            if (!empty($CheckUserPass) && $CheckUserPass['passWord'] === $pass_word) {
+                $_SESSION['user'] = $user_name;
+                $_SESSION['password'] = $pass_word;
+                header("location:index.php");
+            }
+            else{
+                include_once "src/view/Sign_in/sign_in.php";
+            }
+
+        }
+    }
+    public function loginAdmin(){
+        if($_SESSION['REQUEST_METHOD']=="GET"){
+            include_once "src/view/Sign_in/sign_in.php";
+        }
+        else{
+            $admin_name = $_REQUEST['userName'];
+            $pass_word = $_REQUEST['passWord'];
+            $checkAdminPass = $this->memberModel->adminLogin($admin_name);
+            if(!empty($checkAdminPass)&& $checkAdminPass['passWord']=== $pass_word){
+                $_SESSION['user']= $admin_name;
+                $_SESSION['password'] = $pass_word;
+                header("location:routeAdmin.php");
+            }
+        }
+    }
+
+    public function logOut()
+    {
+
+        if (!empty($_SESSION['user'])) {
+            unset($_SESSION['user']);
+        }
+        header('location:index.php');
+
     }
 }
+

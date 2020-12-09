@@ -14,6 +14,7 @@ class ProductController
         $this->productModel = new ProductModel();
     }
     public function show(){
+
         $products = $this->productModel->getAll();
         include_once "src/view/view_customer/homepage.php";
     }

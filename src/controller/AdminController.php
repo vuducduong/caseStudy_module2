@@ -63,10 +63,14 @@ class AdminController
                 echo 'fail';
             }
             $image = $path == 'uploads/' ? 'upload/default.png' : $path;
-            $newProduct = new Product($name, $price, $type, $image);
-            $newProduct->setId($id);
-            $this->admin_Model->editProduct($newProduct);
-            header("location:routeAdmin.php");
+            if (!empty($name) && !empty($type) && !empty($price) && !empty($id) && !empty($image)) {
+                $newProduct = new Product($name, $price, $type, $image);
+                $newProduct->setId($id);
+                $this->admin_Model->editProduct($newProduct);
+                header("location:routeAdmin.php");
+            } else {
+                include_once "src/view/view_admin/product_management/edit_product.php";
+            }
         }
     }
 
@@ -75,5 +79,10 @@ class AdminController
         $id = $_REQUEST['id'];
         $this->admin_Model->deleteProduct($id);
         header("location:routeAdmin.php");
+    }
+
+    public function search()
+    {
+        
     }
 }

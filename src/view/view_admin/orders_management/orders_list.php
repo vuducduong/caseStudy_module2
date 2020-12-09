@@ -20,7 +20,7 @@
         <?php foreach ($orders as $key=>$order):?>
             <tr>
                 <th scope="row"><?php echo $key+1?></th>
-                <td><?php echo $order['name']?></td>
+                <td><?php echo $order['fullname']?></td>
                 <td><?php echo $order['productName']?></td>
                 <td><?php echo $order['priceEach']?></td>
                 <td><?php echo $order['quantityOrdered']?></td>

@@ -12,43 +12,204 @@
 </head>
 <body>
 
-</body>
-</html>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <!--<h1 style="text-align: center;">Game 01 (9137)</h1>-->
-            <div class="login-panel panel panel-default" style="margin-top:15%;">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Đăng nhập</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form" action="/login.html" th:action="@{/login.html}" method="POST">
-                        <fieldset>
+<!------ Include the above in your HEAD tag ---------->
 
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user fa"
-                                                                       aria-hidden="true"></i></span>
-                                    <input class="form-control" placeholder="Tên đăng nhập" name="j_username"
-                                           type="text" autofocus="autofocus" required/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input class="form-control" placeholder="Mật khẩu" name="j_password" type="password"
-                                           value="" required/>
-                                </div>
-                            </div>
-                            <button href="index.html" class="btn btn-lg btn-success btn-block">Đăng nhập</button>
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="panel-footer text-center">
-                    Copyright © All right reserved. <a href="http://yotel.vn/">yotel.vn</a>™
-                </div>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="header">
+</div>
+<section class="login-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Login Now</h2>
+                <form class="login-form" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">User name</label>
+                        <input type="text" class="form-control" required="required" name="userName" placeholder="User Name"></div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+                        <input type="password" name="passWord" required="required" class="form-control" placeholder="Pass Word">
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            <small>Remember Me</small>
+                        </label>
+                        <button type="submit" class="btn btn-login float-right">Submit</button>
+                    </div>
+
+                </form>
             </div>
         </div>
-    </div>
-</div>
+</section>
+</body>
+<style>
+    .header {
+        width: 0%;
+        height: 0px;
+
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -ms-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s;
+    }
+
+
+    /*-----------MEDIA QUERIES*/
+    @media all and (max-width: 660px) {
+        .header h1#logo {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .header nav {
+            display: block;
+            float: none;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .header nav a {
+            line-height: 50px;
+            margin: 0 10px;
+        }
+
+        .header.smaller {
+            height: 75px;
+        }
+
+        .header.smaller h1#logo {
+            height: 40px;
+            line-height: 40px;
+            font-size: 30px;
+        }
+
+        .header.smaller nav {
+            height: 35px;
+            line-height: 35px;
+        }
+
+        .header.smaller nav a {
+            line-height: 35px;
+        }
+    }
+
+
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+    .login-block {
+        background: #DE6262; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom, #FFB88C, #DE6262); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        float: left;
+        width: 100%;
+        padding: 200px 0;
+    }
+
+    .banner-sec {
+        background: url(https://ibb.co/mt5RmQY) no-repeat left bottom;
+        background-size: cover;
+        min-height: 600px;
+        border-radius: 0 10px 10px 0;
+        padding: 0;
+    }
+
+    .container {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-inner {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .carousel-caption {
+        text-align: left;
+        left: 5%;
+    }
+
+    .login-sec {
+        padding: 50px 30px;
+        position: relative;
+    }
+
+    .login-sec .copy-text {
+        position: absolute;
+        width: 80%;
+        bottom: 20px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .login-sec .copy-text i {
+        color: #FEB58A;
+    }
+
+    .login-sec .copy-text a {
+        color: #E36262;
+    }
+
+    .login-sec h2 {
+        margin-bottom: 30px;
+        font-weight: 800;
+        font-size: 30px;
+        color: #DE6262;
+    }
+
+    .login-sec h2:after {
+        content: " ";
+        width: 100px;
+        height: 5px;
+        background: #FEB58A;
+        display: block;
+        margin-top: 20px;
+        border-radius: 3px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .btn-login {
+        background: #DE6262;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .banner-text {
+        width: 100%;
+        position: absolute;
+        bottom: 40px;
+        padding-left: 20px;
+    }
+
+    .banner-text h2 {
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .banner-text h2:after {
+        content: " ";
+        width: 100px;
+        height: 5px;
+        background: #FFF;
+        display: block;
+        margin-top: 20px;
+        border-radius: 3px;
+    }
+
+    .banner-text p {
+        color: #fff;
+    }
+</style>

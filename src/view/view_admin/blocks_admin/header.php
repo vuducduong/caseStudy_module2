@@ -17,8 +17,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <title>Infantry</title>
+    <title>Admin</title>
 </head>
 <body>
     <div id="page-container" class="main-admin">
@@ -30,7 +29,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown ets-right-0">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="http://localhost/case_studymodule2/uploads/nhatcuong.png" class="img-fluid rounded-square border user-profile">
+                        <img src="http://localhost/case_studymodule2/uploads/hn.png" class="img-fluid rounded-square border user-profile">
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Action</a>
@@ -44,8 +43,8 @@
         <div class="side-bar">
             <div class="side-bar-links">
                 <div class="side-bar-logo text-center py-3">
-                    <img src="http://localhost/case_studymodule2/uploads/nhatcuong.png" class="img-fluid rounded-square border bg-secoundry mb-3">
-                    <h5>Nhật Cường Mobile</h5>
+                    <img src="http://localhost/case_studymodule2/uploads/hn.png" class="img-fluid rounded-square border bg-secoundry mb-3">
+                    <h5>Smobile</h5>
                 </div>
                 <ul class="navbar-nav">
 

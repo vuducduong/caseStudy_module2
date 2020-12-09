@@ -1,5 +1,7 @@
+<?php if(!empty($_SESSION['user'])){
+    require_once "src/view/view_customer/blocks_customer/header-member.php";}
+else{require_once "src/view/view_customer/blocks_customer/header.php";}?>
 
-<?php require_once "src/view/view_customer/blocks_customer/header.php"?>
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">E-COMMERCE CART</h1>
@@ -93,8 +95,9 @@
         </div>
 
     </div>
+</div>
     <?php require_once "src/view/view_customer/blocks_customer/footer.php"?>
 
-</div><!--Section: Block Content-->
+
 </body>
 </html>

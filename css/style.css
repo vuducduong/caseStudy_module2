@@ -2,6 +2,7 @@
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content{
     display: none;
     position: absolute;
@@ -80,10 +81,14 @@ body {
 .pagination {
     margin-top: 20px;
 }
-footer {
-    background: #343a40;
-    padding: 40px;
-}
+/*footer {*/
+/*    background: #e3f2fd!important;*/
+/*    padding: 40px;*/
+/*}*/
 footer a {
     color: #f8f9fa!important
+}
+.list-product-title{
+    width: 100px;
+    text-transform: uppercase;
 }

@@ -32,16 +32,15 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center">Bạn thật sự muốn xóa</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center">Xóa</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
-                    </div>
+                    <div class="modal-body">Bạn có thật sự muốn xóa</div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <a href="http://localhost/case_studymodule2/routeAdmin.php?admin=user&user=delete-user&id=<?php echo $user['id']?> " type="button" class="btn btn-primary">Save changes</a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <a href="http://localhost/case_studymodule2/routeAdmin.php?admin=user&user=delete-user&id=<?php echo $user['id']?> " type="button" class="btn btn-success">OK</a>
                     </div>
                 </div>
             </div>
