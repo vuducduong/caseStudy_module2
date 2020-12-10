@@ -27,7 +27,7 @@
             <div class="col-4"></div>
             <div class="col-md-4 login-sec">
                 <h2 class="text-center">Login Now</h2>
-                <form class="login-form" method="post">
+                <form class="login-form" method="post" action="index.php?page=sign-in">
                     <div class="form-group">
                         <label for="exampleInputEmail1" class="text-uppercase">User name</label>
                         <input type="text" class="form-control" required="required" name="userName" placeholder="User Name"></div>

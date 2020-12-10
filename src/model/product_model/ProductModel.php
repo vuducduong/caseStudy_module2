@@ -65,4 +65,12 @@ class ProductModel extends DBconnect
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function search($productName)
+    {
+        $sql = "SELECT * FROM `products` WHERE productName LIKE '$productName'";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

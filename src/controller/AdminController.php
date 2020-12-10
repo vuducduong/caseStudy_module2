@@ -83,6 +83,8 @@ class AdminController
 
     public function search()
     {
-        
+        $key = "%".$_REQUEST['productName']."%";
+        $products = $this->admin_Model->search($key);
+        include_once "src/view/view_admin/product_management/pageAdmin.php";
     }
 }

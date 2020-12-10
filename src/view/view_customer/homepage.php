@@ -52,9 +52,8 @@
                         <strong><p  class="card-text"><?php echo number_format($product['price'])?> VND</p></strong>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <a class="btn btn-sm btn-outline-secondary" name="id" href="index.php?page=action&action=add&id=<?php echo $product['id']?>">Buy</a>
+                                <a class="btn btn-sm btn-outline-success" name="id" href="index.php?page=action&action=add&id=<?php echo $product['id']?>">Buy</a>
                             </div>
-                            <small class="text-muted"></small>
                         </div>
                     </div>
                 </div>

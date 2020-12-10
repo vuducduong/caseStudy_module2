@@ -16,11 +16,4 @@ class MemberModel extends DBconnect
         $stmt->execute();
         return $stmt->fetch();
     }
-    public function adminLogin($admin){
-        $sql = "SELECT userName,passWord FROM admin where userName=:userName";
-        $stmt = $this->connect()->prepare($sql);
-        $stmt->bindParam(":userName",$admin);
-        $stmt->execute();
-        return $stmt->fetch();
-    }
 }

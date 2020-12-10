@@ -37,6 +37,9 @@ switch ($admin){
     case 'delete':
         $adminController->deleteProduct();
         break;
+    case 'search':
+        $adminController->search();
+        break;
     case 'user':
         switch ($user){
             case 'add-user':

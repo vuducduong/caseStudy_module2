@@ -103,7 +103,7 @@
         }</style>
 </head>
 <body>
-<form method="post">
+<form method="post" action="index.php?page=sign-up">
 <div class="container register">
     <div class="row">
         <div class="col-md-3 register-left">
@@ -127,19 +127,16 @@
                                 <input type="text" class="form-control" name="fullname" required="required" placeholder="Full Name *" value="" />
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="address"  required="required" laceholder="Address *" value="" />
+                                <input type="text" class="form-control" name="address"  required="required" placeholder="Address *" value="" />
                             </div>
                             <div class="form-group">
-                                        <input type="text" name="sex" required="required">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                                        <input type="text" class="form-control" name="sex" required="required" placeholder="Gender">
+                                </div
                             <div class="form-group">
                                 <input type="email" class="form-control" name="email" required="required" placeholder="Your Email *" value="" />
                             </div>
                             <div class="form-group">
-                                <input type="text" minlength="10" maxlength="10" required="required" name="phoneNumber" class="form-control" placeholder="Your Phone *" value="" />
+                                <input type="text" required="required" name="phoneNumber" class="form-control" placeholder="Your Phone *" value="" />
                             </div>
                             <div class="form-group">
                             </div>

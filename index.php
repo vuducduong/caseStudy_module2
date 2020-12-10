@@ -41,7 +41,7 @@ switch ($page) {
         $productController->showPhoneType('iphone');
         break;
     case 'Vinsmart':
-        $productController->showPhoneType('Vinsmart');
+        $productController->showPhoneType('xiaomi');
         break;
     case 'samsung':
         $productController->showPhoneType('samsung');
@@ -70,7 +70,7 @@ switch ($page) {
         $signUp->signUp();
         break;
     case 'sign-in':
-        $signIn->login() || $signIn->loginAdmin();
+        $signIn->login();
         break;
     case 'log-out':
         $signIn->logOut();

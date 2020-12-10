@@ -21,12 +21,9 @@
             </ul>
         </div>
         <div class="col-6 col-md">
-            <h5 class="text-light">About</h5>
-            <ul class="list-unstyled text-small">
-                <li><a class="text-light" href="#">Team</a></li>
-                <li><a class="text-light" href="#">Locations</a></li>
-                <li><a class="text-light" href="#">Privacy</a></li>
-            </ul>
+            <h5 class="text-light">Thanh Toán</h5>
+            <img  src="uploads/carousel/visa_mastercard.gif" alt="" width="250px">
+
         </div>
         <div class="col-12 col-md">
             <img  src="uploads/carousel/bct.png" alt="" width="250px">

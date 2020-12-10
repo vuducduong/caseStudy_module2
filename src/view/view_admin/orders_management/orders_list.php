@@ -13,7 +13,6 @@
             <th scope="col">Order Date</th>
             <th scope="col">Shipped Date</th>
             <th scope="col">Status</th>
-            <th scope="col" colspan="2">Action</th>
         </tr>
         </thead>
         <tbody>
@@ -27,22 +26,6 @@
                 <td><?php echo $order['orderDate']?></td>
                 <td><?php echo $order['shippedDate']?></td>
                 <td><?php echo $order['status']?></td>
-                <td><a type="button" href="http://localhost/case_studymodule2/routeAdmin.php?admin=user&user=edit-user&id=<?php echo $user['id']?> "class="btn btn-warning">Edit</a></td>
-                <td><a type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">Delete</a></td>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center">Bạn thật sự muốn xóa</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <a href="http://localhost/case_studymodule2/routeAdmin.php?admin=user&user=delete-user&id=<?php echo $user['id']?> " type="button" class="btn btn-primary">Save changes</a>
                             </div>
                         </div>
                     </div>
